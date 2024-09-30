@@ -46,6 +46,7 @@ static const char *mutevol[]    = { "/usr/bin/pactl", "set-sink-mute", "@DEFAULT
 
 static const char *mutemic[] 	= { "amixer", "-q", "set", "Capture", "toggle", NULL };
 
+static const char *slock[] = {"slock", NULL};
 
 /* Brightness controls*/
 static const char *light_up[]   = { "/usr/bin/light",   "-A", "10", NULL };
@@ -121,6 +122,7 @@ static const Key keys[] = {
 	{ 0,							XF86XK_MonBrightnessUp,		spawn,	{.v = light_up} },
 	{ 0,							XF86XK_MonBrightnessDown,	spawn,	{.v = light_down} },
 	{ 0,							XF86XK_AudioMicMute, 			spawn,  {.v = mutemic} },
+	{ 0,							XF86XK_Display, 			spawn,  {.v = slock} },
 };
 
 /* button definitions */
